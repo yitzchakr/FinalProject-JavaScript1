@@ -19,6 +19,10 @@ form {
     padding: 10px;
     border: none;
     border-radius: 10px;
+    cursor: pointer;
+}
+#entryButtonContainer button:hover {
+background-color: #0080ff;
 }
 input {
     width: 100%;
@@ -26,7 +30,7 @@ input {
     margin-top: 5px;
     box-sizing: border-box;
 }
-form button ,#login-container button{
+form button {
     background-color: #4CAF50;
     color: white;
     padding: 10px 15px;
@@ -47,4 +51,11 @@ form button ,#login-container button{
     font-size: 0.8em;
     margin-top: 5px;
     display: none;
+}
+.error-border {
+    border: 2px solid red;
+}
+
+.success-border {
+    border: 2px solid lawngreen;
 }

@@ -31,7 +31,7 @@
 
     <div class="inputContainer" id="emailCont">
         <label for="email">Email</label>
-        <input type="email" name="email" id="email">
+        <input type="email" name="email" id="email" required>
         <div id="emailError" class="error">Please enter a valid email address</div>
     </div>
 
@@ -45,17 +45,11 @@
         <div class="inputContainer">
             <label for="userLogin">User Name</label>
             <input type="text" name="userName" class="userName" id="userLogin">
-            <div id="userLoginError" class="error">Username must be 3-15 characters long and contain only letters and
-                numbers
-            </div>
         </div>
         <div class="inputContainer">
             <label for="passwordLogin">Password</label>
             <input type="text" name="password" class="password" id="passwordLogin">
-            <div id="passwordLoginError" class="error">Password must be at least 8 characters long and contain at least
-                one
-                uppercase letter, one lowercase letter, and one number
-            </div>
+            <div id="passwordLoginError" class="error">Login Info does not match records</div>
         </div>
         <button type="submit">Log In</button>
     </div>
