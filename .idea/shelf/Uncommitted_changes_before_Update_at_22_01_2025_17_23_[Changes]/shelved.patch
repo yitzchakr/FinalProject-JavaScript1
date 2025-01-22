@@ -1,0 +1,435 @@
+Index: .idea/modules.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ProjectModuleManager\">\r\n    <modules>\r\n      <module fileurl=\"file://$PROJECT_DIR$/.idea/FinalProject-javascript1.iml\" filepath=\"$PROJECT_DIR$/.idea/FinalProject-javascript1.iml\" />\r\n    </modules>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/modules.xml b/.idea/modules.xml
+--- a/.idea/modules.xml	(revision c6cbbad8bd560a97cc8eafeeaa564c10df7b5dae)
++++ b/.idea/modules.xml	(date 1737558957397)
+@@ -2,7 +2,7 @@
+ <project version="4">
+   <component name="ProjectModuleManager">
+     <modules>
+-      <module fileurl="file://$PROJECT_DIR$/.idea/FinalProject-javascript1.iml" filepath="$PROJECT_DIR$/.idea/FinalProject-javascript1.iml" />
++      <module fileurl="file://$PROJECT_DIR$/.idea/untitled2.iml" filepath="$PROJECT_DIR$/.idea/untitled2.iml" />
+     </modules>
+   </component>
+ </project>
+\ No newline at end of file
+Index: .idea/vcs.xml
+===================================================================
+diff --git a/.idea/vcs.xml b/.idea/vcs.xml
+deleted file mode 100644
+--- a/.idea/vcs.xml	(revision c6cbbad8bd560a97cc8eafeeaa564c10df7b5dae)
++++ /dev/null	(revision c6cbbad8bd560a97cc8eafeeaa564c10df7b5dae)
+@@ -1,6 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="VcsDirectoryMappings">
+-    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+-  </component>
+-</project>
+\ No newline at end of file
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"babd2f26-2cb7-4370-80f0-8d30bf88d5be\" name=\"Changes\" comment=\"\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"CSS File\" />\r\n        <option value=\"HTML File\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 8\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"2rtVyeCJnQAkIOWMITkoj2ZzYjJ\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"DefaultHtmlFileTemplate\": \"HTML File\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"RunOnceActivity.git.unshallow\": \"true\",\r\n    \"git-widget-placeholder\": \"master\",\r\n    \"list.type.of.created.stylesheet\": \"CSS\",\r\n    \"node.js.detected.package.eslint\": \"true\",\r\n    \"node.js.detected.package.tslint\": \"true\",\r\n    \"node.js.selected.package.eslint\": \"(autodetect)\",\r\n    \"node.js.selected.package.tslint\": \"(autodetect)\",\r\n    \"nodejs_interpreter_path\": \"C:/Users/Owner/AppData/Roaming/JetBrains/WebStorm2024.3/node/versions/22.13.0/node\",\r\n    \"nodejs_package_manager_path\": \"npm\",\r\n    \"settings.editor.selected.configurable\": \"settings.nodejs\",\r\n    \"vue.rearranger.settings.migration\": \"true\"\r\n  }\r\n}]]></component>\r\n  <component name=\"SharedIndexes\">\r\n    <attachedChunks>\r\n      <set>\r\n        <option value=\"bundled-js-predefined-d6986cc7102b-deb605915726-JavaScript-WS-243.22562.222\" />\r\n      </set>\r\n    </attachedChunks>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"babd2f26-2cb7-4370-80f0-8d30bf88d5be\" name=\"Changes\" comment=\"\" />\r\n      <created>1737378613885</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1737378613885</updated>\r\n      <workItem from=\"1737378615020\" duration=\"24684000\" />\r\n    </task>\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision c6cbbad8bd560a97cc8eafeeaa564c10df7b5dae)
++++ b/.idea/workspace.xml	(date 1737559214374)
+@@ -4,8 +4,10 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="babd2f26-2cb7-4370-80f0-8d30bf88d5be" name="Changes" comment="">
+-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++    <list default="true" id="db0c8367-a627-47f9-ae1c-d1b4bfe661af" name="Changes" comment="">
++      <change afterPath="$PROJECT_DIR$/set.js" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/setStyle.css" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/setIndex.html" beforeDir="false" afterPath="$PROJECT_DIR$/setIndex.html" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -15,7 +17,6 @@
+   <component name="FileTemplateManagerImpl">
+     <option name="RECENT_TEMPLATES">
+       <list>
+-        <option value="CSS File" />
+         <option value="HTML File" />
+       </list>
+     </option>
+@@ -23,10 +24,22 @@
+   <component name="Git.Settings">
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+   </component>
+-  <component name="ProjectColorInfo">{
+-  &quot;associatedIndex&quot;: 8
+-}</component>
+-  <component name="ProjectId" id="2rtVyeCJnQAkIOWMITkoj2ZzYjJ" />
++  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
++  "lastFilter": {
++    "state": "OPEN",
++    "assignee": "Jonnywalkerhal"
++  }
++}]]></component>
++  <component name="GithubPullRequestsUISettings"><![CDATA[{
++  "selectedUrlAndAccountId": {
++    "url": "https://github.com/yitzchakr/FinalProject-JavaScript1",
++    "accountId": "ac2e25da-9a6d-434f-a697-d0aafb042c6b"
++  }
++}]]></component>
++  <component name="ProjectColorInfo"><![CDATA[{
++  "associatedIndex": 1
++}]]></component>
++  <component name="ProjectId" id="2rzNuFuHSbYu4f3G25Z2MdeGvfr" />
+   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+   <component name="ProjectViewState">
+     <option name="hideEmptyMiddlePackages" value="true" />
+@@ -37,18 +50,20 @@
+     "DefaultHtmlFileTemplate": "HTML File",
+     "RunOnceActivity.ShowReadmeOnStart": "true",
+     "RunOnceActivity.git.unshallow": "true",
+-    "git-widget-placeholder": "master",
+-    "list.type.of.created.stylesheet": "CSS",
++    "git-widget-placeholder": "set-board",
+     "node.js.detected.package.eslint": "true",
+     "node.js.detected.package.tslint": "true",
+     "node.js.selected.package.eslint": "(autodetect)",
+     "node.js.selected.package.tslint": "(autodetect)",
+-    "nodejs_interpreter_path": "C:/Users/Owner/AppData/Roaming/JetBrains/WebStorm2024.3/node/versions/22.13.0/node",
+     "nodejs_package_manager_path": "npm",
+-    "settings.editor.selected.configurable": "settings.nodejs",
+     "vue.rearranger.settings.migration": "true"
+   }
+ }]]></component>
++  <component name="RecentsManager">
++    <key name="MoveFile.RECENT_KEYS">
++      <recent name="$PROJECT_DIR$" />
++    </key>
++  </component>
+   <component name="SharedIndexes">
+     <attachedChunks>
+       <set>
+@@ -59,27 +74,16 @@
+   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+   <component name="TaskManager">
+     <task active="true" id="Default" summary="Default task">
+-      <changelist id="babd2f26-2cb7-4370-80f0-8d30bf88d5be" name="Changes" comment="" />
+-      <created>1737378613885</created>
++      <changelist id="db0c8367-a627-47f9-ae1c-d1b4bfe661af" name="Changes" comment="" />
++      <created>1737558163130</created>
+       <option name="number" value="Default" />
+       <option name="presentableId" value="Default" />
+-      <updated>1737378613885</updated>
+-      <workItem from="1737378615020" duration="24684000" />
++      <updated>1737558163130</updated>
++      <workItem from="1737558164187" duration="320000" />
+     </task>
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+     <option name="version" value="3" />
+   </component>
+-  <component name="Vcs.Log.Tabs.Properties">
+-    <option name="TAB_STATES">
+-      <map>
+-        <entry key="MAIN">
+-          <value>
+-            <State />
+-          </value>
+-        </entry>
+-      </map>
+-    </option>
+-  </component>
+ </project>
+\ No newline at end of file
+Index: set.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/set.js b/set.js
+new file mode 100644
+--- /dev/null	(date 1737558957399)
++++ b/set.js	(date 1737558957399)
+@@ -0,0 +1,157 @@
++let deck = shuffleDeck(createDeck());
++const elementMap = new Map();
++
++
++// Function to create a of 81 cards
++function createDeck() {
++    const deck = [];
++    const numbers = [1, 2, 3];
++    const shapes = ["circle", "rectangle", "square"];
++    const colors = ["red", "green", "purple"];
++    const fillings = ["solid", "striped", "empty"];
++
++    let cardId = 1;
++    // Generate all 81 cards
++    for (const number of numbers) {
++        for (const shape of shapes) {
++            for (const color of colors) {
++                for (const filling of fillings) {
++                    deck.push({id: cardId++, number, shape, color, filling});
++                }
++            }
++        }
++    }
++    return deck;
++}
++
++//shuffle function
++function shuffleDeck(deck) {
++    for (let i = deck.length - 1; i > 0; i--) {
++        const j = Math.floor(Math.random() * (i + 1));
++        [deck[i], deck[j]] = [deck[j], deck[i]]; // Swaps those two indexes with each other
++    }
++    return deck;
++}
++
++function initializeGame() {
++    const startButton = document.getElementById('startButton');
++    startButton.disabled = true;
++
++    for (let i = 0; i < 12; i++) {
++        let card = deck.pop();
++        placecardOnBoard(card);
++    }
++}
++
++function newCardMaker(amount) {
++    let newCards = [];
++    for (let i = 0; i < amount; i++) {
++        let card = deck.pop();
++        newCards[i] = createCardElement(card)
++    }
++    return newCards;
++}
++
++function createCardElement(card) {
++    const cardDiv = document.createElement("div");
++    cardDiv.id = `card-${card.id}`;
++    cardDiv.className = "card";
++    elementMap.set(cardDiv, card);
++
++    document.getElementById("board").appendChild(cardDiv);
++
++    for (let i = 0; i < card.number; i++) {
++        let pic = document.createElement("div");
++        let properties = Object.values(card);
++        pic.className = properties.slice(2,).join(" ");
++        cardDiv.appendChild(pic);
++    }
++    addCardClickBehavior(cardDiv, card);
++
++    return cardDiv;
++}
++
++function placecardOnBoard(card) {
++    const cardDiv = createCardElement(card);
++    document.getElementById("board").appendChild(cardDiv);
++}
++
++
++function addCardClickBehavior(cardDiv, card) {
++    let isClicked = false;
++    let board = document.getElementById("board");
++    cardDiv.addEventListener("click", () => {
++        isClicked = !isClicked;
++        if (isClicked) {
++            cardDiv.classList.add('cardClicked');
++        } else {
++            cardDiv.classList.remove('cardClicked');
++        }
++        let listClickedElements = board.querySelectorAll('.cardClicked');
++        if (listClickedElements.length === 3) {
++            let cards = getSetOfClickedCards(listClickedElements);
++            let isSet = checkIfSet(cards);
++            console.log(isSet);
++            if (isSet) {
++                setFound(listClickedElements);
++            } else {
++                setTimeout(noSetfound, 1500);
++            }
++        }
++    });
++}
++
++function setFound(cardSet) {
++    const deckSize = deck.length;
++    let amount;
++    if (deckSize >= 3) {
++        amount = 3;
++    } else {
++        amount = deckSize;
++    }
++
++    const newcards = newCardMaker(amount);
++    if (newcards.length === 0) {
++        for (const card of cardSet) {
++            card.remove();
++        }
++        return;
++    }
++    const board = document.getElementById("board");
++    for (const card of cardSet) {
++        board.replaceChild(newcards.pop(), card)
++    }
++
++    const cards = board.querySelectorAll('.cardClicked');
++    cards.forEach(div => div.classList.remove("cardClicked"));
++}
++
++function noSetfound() {
++    const board = document.getElementById("board");
++    const cards = board.querySelectorAll('.cardClicked');
++    cards.forEach(div => div.classList.remove("cardClicked"));
++}
++
++function getSetOfClickedCards(list) {
++    const cards = [];
++    for (let i = 0; i < list.length; i++) {
++        cards.push(elementMap.get(list[i]));
++    }
++    return cards;
++}
++
++
++// Function to check if 3 cards form a set (replace with your logic)
++function checkIfSet(cards) {
++    // Implement your logic to check if the three cards in the `cards` array form a set based on their properties (number, shape, color, filling)
++    // This example provides a placeholder logic (replace with your actual set checking)
++    const numberSet = new Set(cards.map(card => card.number));
++    const shapeSet = new Set(cards.map(card => card.shape));
++    const colorSet = new Set(cards.map(card => card.color));
++    const fillingSet = new Set(cards.map(card => card.filling));
++    return (numberSet.size === 1 || numberSet.size === 3) &&
++        (shapeSet.size === 1 || shapeSet.size === 3) &&
++        (colorSet.size === 1 || colorSet.size === 3) &&
++        (fillingSet.size === 1 || fillingSet.size === 3);
++}
++
+Index: setStyle.css
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/setStyle.css b/setStyle.css
+new file mode 100644
+--- /dev/null	(date 1737558957400)
++++ b/setStyle.css	(date 1737558957400)
+@@ -0,0 +1,107 @@
++.table {
++    display: grid;
++    grid-template-columns: repeat(4, 1fr);
++    gap: 10px;
++}
++
++.card {
++    border: 1px solid black;
++    padding: 10px;
++    text-align: center;
++    width: 100px;
++    height: 150px;
++    margin: 20px;
++    display: flex;
++    flex-direction: column;
++    justify-content: space-around;
++    align-items: center;
++    cursor: wait;
++}
++.card.selected {
++    border: 2px solid blue; /* Highlight selected cards */
++    box-shadow: 0 0 5px rgba(0, 0, 255, 0.5); /* Add a subtle shadow */
++}
++
++.board {
++    display: grid;
++    grid-template-columns: repeat(4, 1fr);
++    justify-items: center;
++}
++
++.card.selected {
++    border: 2px solid red;
++}
++.cardClicked{
++    border: 2px solid #6bd83d;
++}
++
++.button-pannel button {
++    margin: 0 5px;
++    padding: 5px 10px;
++    border: none;
++    background-color: #007bff;
++    color: white;
++    border-radius: 5px;
++    cursor: pointer;
++}
++
++.red {
++    border: 3px solid red;
++    background-color: red;
++}
++
++.green {
++    border: 3px solid green;
++    background-color: green;
++}
++
++.purple {
++    border: 3px solid purple;
++    background-color: purple;
++}
++
++.circle {
++    height: 15%;
++    width: 30%;
++    border-radius: 50%;
++}
++
++.rectangle {
++    height: 10%;
++    width: 75%;
++}
++
++.square {
++    height: 20%;
++    width: 30%;
++}
++
++.solid {
++}
++
++.empty {
++    background-color: white;
++}
++
++
++.striped {
++    background-image: repeating-linear-gradient(
++            45deg,
++            transparent,
++            transparent 20px,
++            #333 20px,
++            #333 30px
++    );
++    background-size: 70px 70px; /* Adjust for stripe width and density */
++}
++.striped {
++    background-color: #a52626;
++    background-image:
++            repeating-linear-gradient(
++                    90deg,
++                    transparent,
++                    transparent 1px,
++                    #ccc 1px,
++                    #ccc 2px
++            );
++}
+\ No newline at end of file
