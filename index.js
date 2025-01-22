@@ -9,6 +9,7 @@ const validator = {
 
 }
 const signUpInputs = singUpForm.querySelectorAll("input");
+let currentUser;
 
 
 document.getElementById("createAccount").addEventListener("click",()=>{
@@ -85,14 +86,14 @@ function validateSignUp(e) {
 
 function validateLogin(e){
     e.preventDefault();
-    let validated;
+    let validated=true;
     const userName = loginForm.querySelector("#userLogin").value;
     const  password= loginForm.querySelector("#passwordLogin").value;
     const users = JSON.parse(localStorage.getItem("users"));
     if (!users) validated = false;
     else {
-        validated= users.some(user=>user.userName===userName && user.password===password);
+       currentUser = users.find(user=>user.userName===userName && user.password===password);
     }
-    if(!validated)loginForm.querySelector("#passwordLoginError").style.display="block";
+    if(!validated|| !currentUser)loginForm.querySelector("#passwordLoginError").style.display="block";
     else window.location.href= "test.html"
 }
