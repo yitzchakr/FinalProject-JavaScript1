@@ -257,3 +257,10 @@ function pauseTimer() {
     }
 }
 
+function endGame() {
+    let cards = getAllCardsOnBoard();
+    if (noSetsOnBoard(cards)){
+
+    }
+}
+
