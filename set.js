@@ -1,5 +1,11 @@
 let deck = shuffleDeck(createDeck());
+deck = deck.slice(0, 21);
 const elementMap = new Map();
+let setsFound = 0;
+let timer = 0;
+let gameOver = false;
+let gamePause = false;
+let timerId;
 
 
 // Function to create a of 81 cards
@@ -36,9 +42,26 @@ function shuffleDeck(deck) {
 function initializeGame() {
     const startButton = document.getElementById('startButton');
     startButton.disabled = true;
-
+    timerUpdate();
     for (let i = 0; i < 12; i++) {
         let card = deck.pop();
+        placecardOnBoard(card);
+    }
+}
+
+function restartGame() {
+    //erase all cards and data
+    const board = document.getElementById("board");
+    board.innerHTML = "";
+    deck = shuffleDeck(createDeck());
+    let set = document.getElementById("amount-of-sets");
+    set.innerHTML = "0";
+    setsFound = 0;
+    timer = 0;
+
+    //place cards
+    for (let i = 0; i < 12; i++) {
+        const card = deck.pop();
         placecardOnBoard(card);
     }
 }
@@ -81,6 +104,7 @@ function addCardClickBehavior(cardDiv, card) {
     let isClicked = false;
     let board = document.getElementById("board");
     cardDiv.addEventListener("click", () => {
+        if (gamePause) return;
         isClicked = !isClicked;
         if (isClicked) {
             cardDiv.classList.add('cardClicked');
@@ -94,39 +118,49 @@ function addCardClickBehavior(cardDiv, card) {
             console.log(isSet);
             if (isSet) {
                 setFound(listClickedElements);
+                setsFound++;
+                updateSetsFoundUI();
             } else {
-                setTimeout(noSetfound, 1500);
+                setTimeout(noSetFound, 1500);
             }
         }
     });
 }
 
+function updateSetsFoundUI() {
+    let ii = document.getElementById("amount-of-sets");
+    ii.textContent = setsFound;
+}
+
 function setFound(cardSet) {
+    //how many new cards to add to board
     const deckSize = deck.length;
     let amount;
-    if (deckSize >= 3) {
+    if (deckSize >= 3 && getAllCardsOnBoard().length === 12) {
         amount = 3;
     } else {
-        amount = deckSize;
+        amount = 0;
     }
-
-    const newcards = newCardMaker(amount);
-    if (newcards.length === 0) {
+    //if no cards left in deck or more than 12 on board
+    const newCards = newCardMaker(amount);
+    if (newCards.length === 0) {
         for (const card of cardSet) {
             card.remove();
         }
         return;
     }
+    //if cards left in deck we replace the new with old card
     const board = document.getElementById("board");
     for (const card of cardSet) {
-        board.replaceChild(newcards.pop(), card)
+        board.replaceChild(newCards.pop(), card)
     }
 
     const cards = board.querySelectorAll('.cardClicked');
     cards.forEach(div => div.classList.remove("cardClicked"));
 }
 
-function noSetfound() {
+
+function noSetFound() {
     const board = document.getElementById("board");
     const cards = board.querySelectorAll('.cardClicked');
     cards.forEach(div => div.classList.remove("cardClicked"));
@@ -153,5 +187,80 @@ function checkIfSet(cards) {
         (shapeSet.size === 1 || shapeSet.size === 3) &&
         (colorSet.size === 1 || colorSet.size === 3) &&
         (fillingSet.size === 1 || fillingSet.size === 3);
+}
+
+function noSetsOnBoard(allCardsOnBoard) {
+    for (let i = 0; i < allCardsOnBoard.length - 2; i++) {
+        for (let j = i + 1; j < allCardsOnBoard.length - 1; j++) {
+            for (let k = j + 1; k < allCardsOnBoard.length; k++) {
+                const potentialSet = [allCardsOnBoard[i], allCardsOnBoard[j], allCardsOnBoard[k]];
+                if (checkIfSet(potentialSet)) {
+                    return false;
+                }
+            }
+        }
+    }
+    return true;
+}
+
+
+function getAllCardsOnBoard() {
+    const board = document.getElementById("board");
+    const cardElements = board.querySelectorAll(".card");
+    const cards = [];
+
+    cardElements.forEach(cardElement => {
+        const card = elementMap.get(cardElement);
+        if (card) {
+            cards.push(card);
+        }
+    });
+    return cards;
+}
+
+function addCards() {
+    let allCardsOnBoard = getAllCardsOnBoard();
+    if (noSetsOnBoard(allCardsOnBoard)) {
+        newCardMaker(3);
+        console.log("No sets on board");
+    } else {
+        console.log("There is a set on board");
+    }
+}
+
+
+function timerUpdate() {
+    let time = document.getElementById("time-used");
+    timerId = setInterval(() => {
+        timer++;
+        time.textContent = timer.toString();
+    }, 1000)
+}
+
+
+function pauseTimer() {
+    let pauseBtn = document.getElementById("pause");
+    let time = document.getElementById("time-used");
+    gamePause = !gamePause;
+
+
+    if (gamePause) {
+        clearInterval(timerId);
+        timerId = null;
+        pauseBtn.textContent = "Resume Game";
+    } else {
+        timerId = setInterval(() => {
+            timer++;
+            time.textContent = timer.toString();
+        }, 1000)
+        pauseBtn.textContent = "Pause Game";
+    }
+}
+
+function endGame() {
+    let cards = getAllCardsOnBoard();
+    if (noSetsOnBoard(cards)){
+
+    }
 }
 
