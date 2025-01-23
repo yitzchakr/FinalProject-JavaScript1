@@ -6,7 +6,7 @@ let timer = 0;
 let gameOver = false;
 let gamePause = false;
 let timerId;
-
+import {currentUser}from "./index"
 
 // Function to create a of 81 cards
 function createDeck() {
@@ -152,10 +152,17 @@ function setFound(cardSet) {
     }
     //if cards left in deck we replace the new with old card
     const board = document.getElementById("board");
-    for (const card of cardSet) {
-        board.replaceChild(newCards.pop(), card)
-    }
 
+    cardSet.forEach(card => {
+        card.style.transition = "transform 1s ease";
+        card.style.transform = "rotate(720deg)";
+    });
+
+    setTimeout(() => {
+        cardSet.forEach(card => {
+            board.replaceChild(newCards.pop(), card);
+        });
+    }, 1000);
     const cards = board.querySelectorAll('.cardClicked');
     cards.forEach(div => div.classList.remove("cardClicked"));
 }
