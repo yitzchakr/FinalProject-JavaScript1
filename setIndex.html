@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SET GAME</title>
+    <link rel="icon" type="image/x-icon" href="https://i.ibb.co/Tcr5K3z/pic7627182.png">
+    <link rel="stylesheet" href="setStyle.css">
+</head>
+<body>
+<header>
+    <h1>SET GAME</h1>
+</header>
+<main>
+    <div class="button-panel">
+        <div class="button">
+            <button id="startButton" onclick="initializeGame()">Start Game</button>
+            <button id="pause" onclick="pauseTimer()">Pause Game</button>
+            <button id="restart" onclick="restartGame()">Restart Game</button>
+            <button id="ad" onclick="addCards()">Add cards when no set</button>
+        </div>
+        <div class="info">
+            <div id="setsFound">sets found: <span id="amount-of-sets">0</span> </div>
+            <div id="timer">Time Played: <span id="time-used"></span> </div>
+        </div>
+    </div>
+    <div id="board" class="board"></div>
+</main>
+<footer>
+    <p>© 2025 SET GAME</p>
+</footer>
+<script src="set.js"></script>
+</body>
+</html>

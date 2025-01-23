@@ -1,50 +1,147 @@
-.table {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
-}
-
-.card {
-    border: 1px solid black;
-    padding: 10px;
-    text-align: center;
-    width: 100px;
-    height: 150px;
-    margin: 20px;
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     align-items: center;
-    cursor: wait;
-}
-.card.selected {
-    border: 2px solid blue; /* Highlight selected cards */
-    box-shadow: 0 0 5px rgba(0, 0, 255, 0.5); /* Add a subtle shadow */
+    min-height: 100vh;
 }
 
-.board {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    justify-items: center;
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-.card.selected {
-    border: 2px solid red;
-}
-.cardClicked{
-    border: 2px solid #6bd83d;
+header h1 {
+    margin: 0;
+    font-size: 2rem;
 }
 
-.button-pannel button {
-    margin: 0 5px;
-    padding: 5px 10px;
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Button Panel */
+.button-panel {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 10px;
+    flex-direction: column; /* Arrange buttons and info vertically */
+}
+.button-panel button {
+    display: flex;
+    gap: 10px;
+    padding: 10px 20px;
     border: none;
     background-color: #007bff;
     color: white;
     border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
     cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.2s;
 }
 
+.button-panel .button {
+    display: flex;
+    gap: 10px; /* Adds spacing between buttons */
+}
+
+.button-panel .info {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Adds spacing between info elements */
+    margin-top: 10px; /* Space between buttons and info */
+    font-size: 16px;
+    font-weight: bold;
+    color: #555;
+    width: 100%; /* Aligns info to match the button width */
+    max-width: 500px; /* Optional: Sets a max-width for better layout */
+    text-align: center; /* Centers info elements text */
+}
+
+.button-panel button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+/* Board */
+.board {
+
+    margin-top: 20px;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px; /* Adds space between cards */
+    justify-items: center;
+    width: 80%;
+    max-width: 800px;
+    /*margin: 20px auto; !* Adds space above and below the board *!*/
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Cards */
+.card {
+    border: 1px solid black;
+    padding: 15px;
+    text-align: center;
+    width: 100px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+
+.cardClicked {
+    border: 2px solid #6bd83d;
+}
+
+
+/* cards drawing */
 .red {
     border: 3px solid red;
     background-color: red;
@@ -94,14 +191,14 @@
     );
     background-size: 70px 70px; /* Adjust for stripe width and density */
 }
+
 .striped {
     background-color: #a52626;
-    background-image:
-            repeating-linear-gradient(
-                    90deg,
-                    transparent,
-                    transparent 1px,
-                    #ccc 1px,
-                    #ccc 2px
-            );
+    background-image: repeating-linear-gradient(
+            90deg,
+            transparent,
+            transparent 1px,
+            #ccc 1px,
+            #ccc 2px
+    );
 }
