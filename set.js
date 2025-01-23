@@ -1,5 +1,5 @@
 let deck = shuffleDeck(createDeck());
-deck = deck.slice(0, 21);
+deck = deck.slice(0, 12);
 const elementMap = new Map();
 let setsFound = 0;
 let timer = 0;
@@ -147,6 +147,7 @@ function setFound(cardSet) {
         for (const card of cardSet) {
             card.remove();
         }
+        endGame();
         return;
     }
     //if cards left in deck we replace the new with old card
@@ -259,8 +260,9 @@ function pauseTimer() {
 
 function endGame() {
     let cards = getAllCardsOnBoard();
-    if (noSetsOnBoard(cards)){
-
+    if (noSetsOnBoard(cards)) {
+        pauseTimer();
+        console.log("game endded")
     }
 }
 
