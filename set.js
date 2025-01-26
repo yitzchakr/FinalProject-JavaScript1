@@ -1,12 +1,12 @@
 let deck = shuffleDeck(createDeck());
-deck = deck.slice(0, 21);
+deck = deck.slice(0, 15);
 const elementMap = new Map();
+const objectMap = new Map();
 let setsFound = 0;
 let timer = 0;
 let gameOver = false;
 let gamePause = false;
 let timerId;
-import {currentUser}from "./index"
 
 // Function to create a of 81 cards
 function createDeck() {
@@ -45,7 +45,7 @@ function initializeGame() {
     timerUpdate();
     for (let i = 0; i < 12; i++) {
         let card = deck.pop();
-        placecardOnBoard(card);
+        placeCardOnBoard(card);
     }
 }
 
@@ -62,7 +62,7 @@ function restartGame() {
     //place cards
     for (let i = 0; i < 12; i++) {
         const card = deck.pop();
-        placecardOnBoard(card);
+        placeCardOnBoard(card);
     }
 }
 
@@ -80,9 +80,9 @@ function createCardElement(card) {
     cardDiv.id = `card-${card.id}`;
     cardDiv.className = "card";
     elementMap.set(cardDiv, card);
+    objectMap.set(card, cardDiv);
 
-    document.getElementById("board").appendChild(cardDiv);
-
+    //images on card
     for (let i = 0; i < card.number; i++) {
         let pic = document.createElement("div");
         let properties = Object.values(card);
@@ -94,7 +94,7 @@ function createCardElement(card) {
     return cardDiv;
 }
 
-function placecardOnBoard(card) {
+function placeCardOnBoard(card) {
     const cardDiv = createCardElement(card);
     document.getElementById("board").appendChild(cardDiv);
 }
@@ -147,11 +147,13 @@ function setFound(cardSet) {
         for (const card of cardSet) {
             card.remove();
         }
+        endGame();
         return;
     }
     //if cards left in deck we replace the new with old card
     const board = document.getElementById("board");
 
+    //cool effect when set found
     cardSet.forEach(card => {
         card.style.transition = "transform 1s ease";
         card.style.transform = "rotate(720deg)";
@@ -225,14 +227,17 @@ function getAllCardsOnBoard() {
     return cards;
 }
 
+
 function addCards() {
     let allCardsOnBoard = getAllCardsOnBoard();
-    if (noSetsOnBoard(allCardsOnBoard)) {
-        newCardMaker(3);
+    if (noSetsOnBoard(allCardsOnBoard) && deck.length !== 0) {
+        for (let i = 0; i < 3; i++) {
+            placeCardOnBoard(deck.pop());
+        }
         console.log("No sets on board");
-    } else {
-        console.log("There is a set on board");
-    }
+    } else if (noSetsOnBoard(allCardsOnBoard) && deck.length === 0) {
+        console.log("No set on board ans stack is empty");
+    } else console.log("There is a set on board");
 }
 
 
@@ -266,8 +271,33 @@ function pauseTimer() {
 
 function endGame() {
     let cards = getAllCardsOnBoard();
-    if (noSetsOnBoard(cards)){
-
+    if (noSetsOnBoard(cards)) {
+        pauseTimer();
+        console.log("game ended")
     }
 }
 
+function hint() {
+    let set = findHintSet(getAllCardsOnBoard());
+    for (const cards of set) {
+        let divCard = objectMap.get(cards);
+        divCard.classList.add("hint");
+        setTimeout(() => {
+            divCard.classList.remove("hint");
+        }, 2000);
+    }
+}
+
+function findHintSet(allCardsOnBoard) {
+    for (let i = 0; i < allCardsOnBoard.length - 2; i++) {
+        for (let j = i + 1; j < allCardsOnBoard.length - 1; j++) {
+            for (let k = j + 1; k < allCardsOnBoard.length; k++) {
+                const potentialSet = [allCardsOnBoard[i], allCardsOnBoard[j], allCardsOnBoard[k]];
+                if (checkIfSet(potentialSet)) {
+                    return potentialSet;
+                }
+            }
+        }
+    }
+    return [];
+}

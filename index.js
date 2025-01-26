@@ -9,7 +9,7 @@ const validator = {
 
 }
 const signUpInputs = singUpForm.querySelectorAll("input");
-export let currentUser;
+let currentUser;
 
 
 document.getElementById("createAccount").addEventListener("click",()=>{
