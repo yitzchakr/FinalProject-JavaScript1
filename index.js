@@ -35,6 +35,9 @@ loginForm.addEventListener("submit",(e)=>validateLogin(e));
 
 
 function validateInput(inp) {
+    let userNameInp = singUpForm.querySelector("#createUser");
+
+    userNameInp.parentElement.querySelector("#userFoundError").style.display="none";
     let property = validator[inp.name];
     if (!property) {
         inp.className="error-border";
@@ -79,7 +82,7 @@ function validateSignUp(e) {
         }
         users.push(newUser);
         localStorage.setItem("users",JSON.stringify(users));
-        document.querySelector("form").submit();
+        window.location.href= "setIndex.html";
     }
 
 }
@@ -95,5 +98,5 @@ function validateLogin(e){
        currentUser = users.find(user=>user.userName===userName && user.password===password);
     }
     if(!validated|| !currentUser)loginForm.querySelector("#passwordLoginError").style.display="block";
-    else window.location.href= "test.html"
+    else window.location.href= "setIndex.html"
 }
